@@ -1,0 +1,31 @@
+{
+  "name": "codex-usage", "displayName": "Codex Usage", "version": "0.1.0",
+  "description": "Track remaining Codex 5-hour and weekly quota with live status bar progress bars.",
+  "publisher": "Edd", "license": "MIT", "pricing": "Free",
+  "repository": { "type": "git", "url": "https://github.com/EdwardMovsesyan91/codex-usage.git" },
+  "homepage": "https://github.com/EdwardMovsesyan91/codex-usage#readme",
+  "bugs": { "url": "https://github.com/EdwardMovsesyan91/codex-usage/issues" },
+  "categories": ["Other"], "keywords": ["codex", "quota", "usage", "rate limits", "status bar"],
+  "engines": { "vscode": "^1.85.0" },
+  "main": "./out/src/extension.js", "activationEvents": ["onStartupFinished"],
+  "extensionKind": ["ui"],
+  "contributes": {
+    "commands": [
+      { "command": "codexUsage.refresh", "title": "Codex Usage: Refresh" },
+      { "command": "codexUsage.showDetails", "title": "Codex Usage: Show Details" }
+    ],
+    "configuration": { "title": "Codex Usage", "properties": {
+      "codexUsage.refreshInterval": { "type": "number", "default": 60, "minimum": 0, "description": "Fallback refresh/reconnect interval in seconds (minimum effective interval 60). Recent notifications suppress polling. Set 0 for notifications and manual refresh only." },
+      "codexUsage.executablePath": { "type": "string", "default": "", "scope": "machine", "description": "Optional absolute path to the native Codex executable (codex.exe on Windows). Otherwise discover it on PATH, including the npm installation." }
+    }}
+  },
+  "scripts": {
+    "compile": "tsc -p .", "watch": "tsc -watch -p .",
+    "test": "npm run compile && node --test out/test/*.test.js",
+    "vscode:prepublish": "npm test",
+    "audit:release": "node scripts/audit-release.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "package": "npm run check:release && vsce package"
+  },
+  "devDependencies": { "@types/node": "^20.0.0", "@types/vscode": "^1.85.0", "typescript": "^5.7.0" }
+}

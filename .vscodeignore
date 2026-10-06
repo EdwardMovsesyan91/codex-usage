@@ -1,0 +1,7 @@
+# Start with nothing; include only runtime code and public package documents.
+**/*
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+!out/src/*.js
