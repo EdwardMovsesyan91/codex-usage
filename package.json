@@ -1,5 +1,5 @@
 {
-  "name": "codex-usage", "displayName": "Codex Usage", "version": "0.1.0",
+  "name": "edd-codex-usage", "displayName": "Codex Usage by Edd", "version": "0.1.0",
   "description": "Track remaining Codex 5-hour and weekly quota with live status bar progress bars.",
   "publisher": "Edd", "license": "MIT", "pricing": "Free",
   "repository": { "type": "git", "url": "https://github.com/EdwardMovsesyan91/codex-usage.git" },

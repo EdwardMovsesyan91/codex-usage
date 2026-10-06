@@ -1,4 +1,4 @@
-# Codex Usage
+# Codex Usage by Edd
 
 See remaining Codex quota in two VS Code status bar items:
 
@@ -27,7 +27,7 @@ The protocol was inspected with Codex CLI 0.160.1. Other versions may work, but 
 
 ### VS Code Marketplace
 
-After publication, search for **Codex Usage** in VS Code's Extensions view and verify the publisher against this repository's release information. This release candidate has not been published yet.
+Install [Codex Usage by Edd](https://marketplace.visualstudio.com/items?itemName=Edd.edd-codex-usage) from the VS Code Marketplace, or search for **Codex Usage by Edd** in VS Code's Extensions view and verify publisher **Edd**. The extension identifier is `Edd.edd-codex-usage`. Version 0.1.0 is published.
 
 ### From a VSIX
 
